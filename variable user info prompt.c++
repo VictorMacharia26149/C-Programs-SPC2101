@@ -2,7 +2,7 @@
 /*
 Name:Victor Munene
 Reg no:CT100/G/26149/25
-Description:User Information
+Description:User Information input prompt
 */
 
 #include <stdio.h>
@@ -20,7 +20,7 @@ int main(int argc, char**argv)
     printf("Enter your Weight(in kg):");
     scanf("%d", &Weight);
     
-        //display for entered informatin
+        //display for entered information
    printf("These is your recorded information; \n");
    printf("Your Contact is: %d \n",Contact);
    printf("Your Age is :%d years\n",Age);
