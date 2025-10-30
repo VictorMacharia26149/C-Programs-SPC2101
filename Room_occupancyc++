@@ -1,0 +1,41 @@
+/*
+NAME:Victor Munene 
+REG:CT100/G/26149/25
+DESCRIPTION:Room Occupancy programme
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#define FLOORS 5
+#define ROOMS 10
+
+int main() {
+    int occupancy[FLOORS][ROOMS];
+    int occupied_count, vacant_count;
+
+    // room occupancy
+    for (int i = 0; i < FLOORS; i++) {
+        for (int j = 0; j < ROOMS; j++) {
+            occupancy[i][j] = rand() % 2; // Generates a random number 0 or 1
+        }
+        }
+
+    // Display occupancy and count occupied and vacant rooms per floor
+    printf("***Room Occupancy Status***:\n");
+    for (int i = 0; i < FLOORS; i++) {
+        occupied_count = 0;
+        vacant_count = 0;
+        printf("--- Floor %d ---\n", i + 1);
+        for (int j = 0; j < ROOMS; j++) {
+            printf("Room %d: %s\n", j + 1, occupancy[i][j] == 1 ? "Occupied" : "Vacant");
+            if (occupancy[i][j] == 1) {
+                occupied_count++;
+            } else {
+                vacant_count++;
+            }
+            }
+        printf("***Summary for Floor %d: Occupied:*** %d, Vacant: %d\n\n", i + 1, occupied_count, vacant_count);
+    }
+
+    return 0;
+}
